@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Периметр квадарата</title>
+</head>
+<body>
+<h1>Вычисления периметра квадрата</h1>
+<form method="POST">
+
+    {% csrf_token %}
+<div style="display:inline-block">
+    <label>Длина строны квадрата</label> <input type="number" min="0" required name="square_side" value="{{square_side}}">
+</div>
+<div style="display:inline-block">
+<label>Периметр квадрата</label> <input type="number" min="0" required name="square_side" value="{{result}}" disabled>
+</div>
+<div style="display:inline-block">
+
+    <button type="submit">Выполнить</button>
+    <button type="submit" name="reset">Очистить</button>
+</div>
+</form>
+</body>
+</html>
